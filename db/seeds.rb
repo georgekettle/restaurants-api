@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+boris = User.create!(email: 'boris@lewagon.org', password: "secret")
+restaurant = Restaurant.create!(name: "French as ever", user: boris, address: "Paris, France")
+
+5.times do
+  Comment.create!(restaurant: restaurant, user: boris, content: "Best restaurant everrrrr. Tres chic!")
+end
